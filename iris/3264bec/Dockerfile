@@ -30,6 +30,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
  bzip2 \
  pigz \
  perl \
+ autoconf \
+ automake \ 
  libperl-dev \
  default-jre \
  default-jdk \
@@ -43,10 +45,12 @@ RUN git clone --recursive https://github.com/AlexanRNA/Iris.git /Iris
 
 # Build Iris
 WORKDIR /Iris
+RUN chmod +x rebuild_default_external.sh && \
+    ./rebuild_default_external.sh
+
 RUN chmod +x build.sh && \
     ./build.sh
 
-    
 
 # Set the entry point and command
 ENTRYPOINT ["java", "-cp", "/Iris/src", "Iris"]
