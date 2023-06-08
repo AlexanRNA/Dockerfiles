@@ -1,16 +1,16 @@
 FROM ubuntu:lunar
 
 # for easy upgrade later. ARG variables only persist during image build
-ARG CROSSSTITCHVER="7acf470"
+ARG CROSSSTITCHVER="a7805f2"
 ARG HAPCUTVER="0eb7075"
 ARG HTSLIBVER=1.17
 ARG BCFTOOLSVER=1.17
 ARG SAMTOOLSVER=1.17
 
 LABEL base.image="ubuntu:lunar"
-LABEL dockerfile.version="2"
+LABEL dockerfile.version="3"
 LABEL software="CrossStitch"
-LABEL software.version="d1af7e5"
+LABEL software.version="a7805f2"
 LABEL description="CrossStitch creates personalized reference-quality diploid genomes without de novo assembly. Modified version by alexanrna"
 LABEL website="https://github.com/schatzlab/crossstitch"
 LABEL maintainer="Alexandra Pancikova"
