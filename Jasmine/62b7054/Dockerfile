@@ -57,6 +57,4 @@ RUN git clone --recursive https://github.com/AlexanRNA/Jasmine.git && \
 # build Jasmine from source
 RUN  cd Jasmine && chmod +x  ./build_jar.sh && ./build_jar.sh
 
-
-# set perl locale settings
-CMD [ "jasmine" ]
+ENTRYPOINT ["java", "-cp", "/Jasmine/src" ]
