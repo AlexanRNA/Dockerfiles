@@ -1,13 +1,13 @@
 FROM ubuntu:lunar
 
 # for easy upgrade later. ARG variables only persist during image build
-ARG JASMINEVER="62b7054"
+ARG JASMINEVER="a23f2b6"
 
 
 LABEL base.image="ubuntu:lunar"
 LABEL dockerfile.version="1"
 LABEL software="Jasmine"
-LABEL software.version="62b7054"
+LABEL software.version="a23f2b6"
 LABEL description="Jasmine: SV Merging Across Samples. Modified IRIS version by alexanrna"
 LABEL website="https://github.com/AlexanRNA/Jasmine"
 LABEL license="https://github.com/AlexanRNA/Jasmine/blob/master/LICENSE"
@@ -57,4 +57,4 @@ RUN git clone --recursive https://github.com/AlexanRNA/Jasmine.git && \
 # build Jasmine from source
 RUN  cd Jasmine && chmod +x  ./build_jar.sh && ./build_jar.sh
 
-ENTRYPOINT ["java", "-cp", "/Jasmine/src" ]
+ENTRYPOINT ["/Jasmine/jasmine"]
