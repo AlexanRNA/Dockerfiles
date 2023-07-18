@@ -1,12 +1,12 @@
 FROM ubuntu:kinetic
 
-ARG RERIOTAG="b6b8982"
+ARG RERIOTAG="2f68e37"
 ARG DORADOVER=0.3.2
 ARG SAMTOOLSVER=1.17
 
 
 LABEL base.image="ubuntu:kinetic"
-LABEL dockerfile.version="1"
+LABEL dockerfile.version="2"
 LABEL software="Dorado"
 LABEL software.version="0.3.2"
 LABEL description="Dorado is a high-performance, easy-to-use, open source basecaller for Oxford Nanopore reads."
