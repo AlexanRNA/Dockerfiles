@@ -1,10 +1,10 @@
-FROM ubuntu:focal
+FROM ubuntu:noble
 
 # for easy upgrade later. ARG variables only persist during image build
 ARG CRAMINOVER=0.14.5
 
-LABEL base.image="ubuntu:focal"
-LABEL dockerfile.version="1"
+LABEL base.image="ubuntu:noble"
+LABEL dockerfile.version="2"
 LABEL software="cramino"
 LABEL software.version="0.14.5"
 LABEL description="A tool for quick quality assessment of cram and bam files, intended for long read sequencing."
