@@ -3,7 +3,7 @@ FROM ghcr.io/scverse/scvi-tools:py3.12-cu12-1.2.2.post2-dev
 
 # metadata
 LABEL base.image="ghcr.io/scverse/scvi-tools:py3.12-cu12-1.2.2.post2-dev"
-LABEL dockerfile.version="6"
+LABEL dockerfile.version="7"
 LABEL software="scvi-tools"
 LABEL software.version="1.2.2.post2-dev"
 LABEL website="https://github.com/scverse/scvi-tools"
@@ -57,7 +57,7 @@ RUN Rscript --no-echo --no-restore --no-save -e "install.packages('ragg', repos=
 RUN Rscript --no-echo --no-restore --no-save -e "install.packages('ggrastr', repos='https://cloud.r-project.org')"
 RUN Rscript --no-echo --no-restore --no-save -e "BiocManager::install(c('scater','scDblFinder'))"
 
-
+RUN Rscript --no-echo --no-restore --no-save -e "BiocManager::install(c('edgeR'))"
 
 
 
