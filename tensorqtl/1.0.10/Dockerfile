@@ -2,6 +2,7 @@
 # from https://github.com/broadinstitute/tensorqtl/blob/master/Dockerfile, but bumped tensorqtl version to 1.0.10
 FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
 # MAINTAINER Francois Aguet
+# version 2 with stats models added
 
 RUN apt-get update && apt-get install -y software-properties-common && \
     apt-get update && apt-get install -y \
@@ -53,4 +54,7 @@ RUN pip3 install numpy pandas scipy
 RUN pip3 install pandas-plink ipython ipykernel jupyter matplotlib pyarrow torch rpy2 gcsfs Pgenlib>=0.90.1
 RUN pip3 install tensorqtl==1.0.10
 RUN pip3 install seaborn matplotlib
+
+RUN pip3 install statsmodels
+
 
